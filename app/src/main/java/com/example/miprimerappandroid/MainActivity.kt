@@ -1,5 +1,6 @@
 package com.example.miprimerappandroid
 
+import LoginScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -24,10 +25,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             MiPrimerAppAndroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    saludo(
-                        name = "Grupo Voltt",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    LoginScreen()
+
                 }
             }
         }
@@ -40,7 +39,7 @@ fun saludo(name: String, modifier: Modifier = Modifier) {
         text = "Hola $name!",
         modifier = modifier
             .padding(16.dp)
-            .background(color = Color.Black)
+            .background(color = Color.Blue)
             .offset(),
         color = Color.Yellow
     )
